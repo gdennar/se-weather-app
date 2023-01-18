@@ -1,0 +1,29 @@
+﻿@model se_weather_app.Models.City
+
+
+@{
+    ViewData["Title"] = "Home Page";
+    var error = ViewData["error"] as string;
+}
+
+
+
+<div class="container-fluid weather-section">
+    <div class="background">
+        <form method="post" asp-controller="City" asp-action="GetCity"  class="container pt-5">
+  <div class="form-group">
+       @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">@error</div>
+    }
+    <input type="text" class="form-control" id="cityInput" placeholder="Enter city" asp-for="CityName"/>
+
+  </div>
+  <div class="text-center">
+ <button type="submit" class="btn btn-primary mt-3 align-content-center">Submit</button>
+  </div>
+ 
+</form>
+        
+    </div>
+    </div>

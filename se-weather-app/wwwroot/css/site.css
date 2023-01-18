@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.mainBody {
+    padding: 0;
+    height:calc(100vh - 100px);
+}
+
+.background {
+    height: 88vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.081), rgba(0, 0, 0, 0.114)), url("../images/background-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: azure;
+    padding: 0;
+}
+
+.weather-section{
+    padding: 0 !important;
+}
+
+input {
+    width: 60%;
+}
